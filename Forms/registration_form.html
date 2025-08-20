@@ -5,12 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Form </title>
     <style>
-        body{color: brown;}
+        #first{color: rgb(136, 0, 255);}
+        #second{color: rgb(247, 71, 7);}
+        
     </style>
 </head>
 <body>
+    <div id="first">
     <h1>Registration Form</h1>
+    </div>
+    
     <form action="/submit" method="post">
+    
+    <div id="second">
     <label for="Name"> Enter your Name:</label> <br>
     <input type="text" id="name" name="Name" required> <br><br>
 
@@ -40,7 +47,10 @@
     <label for="resume">Select Resume:</label><br>
     <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required>
     <br><br>
+    </div>
+    <div id="third">
     <input type="Submit" value="submit">
+    </div>
     </form>
 </body>
 </html>
