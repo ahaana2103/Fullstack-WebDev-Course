@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application </title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        #first{color: blue;}
+        
+    </style>
+</head>
+<body>
+    <form>
+        <h1 id="first">Job Application</h1>
+            <div class="Application" >
+                <fieldset >
+                    <legend>Personal Information</legend>
+                    <label for="First Name"> Full Name:</label><br><br>
+                    <input type="text" id="First Name:" placeholder="Enter your First Name" required><br><br>
+                    <label for="Last Name">Last Name:</label><br><br>
+                    <input type="text" id="Last Name:" placeholder="Enter your Last Name"required><br><br>
+                    <label for="Email">Email:</label><br><br>
+                    <input type="email" id="Email" placeholder="abc@gmail.com"required><br><br>
+                    <label for="Phone No">Phone No:</label><br><br>
+                    <input type="number" id="Phone No.:" placeholder="Enter your Phone No."required><br><br>
+                </fieldset>
+            </div>
+            <div>
+                 <fieldset>
+                    <legend>Job Details</legend>
+                    <label for="Postion Applied For">Postion Applied For:</label><br><br>
+                    <select id="select a position" name="select a Postion">
+                        <option value="select">Select a position</option>
+                        <option value="Software Developer">Software Developer</option>
+                        <option value="HR">HR</option>
+                        <option value="Manger">Manger</option>
+                        <option value="Hardware Developer">Hardware Developer</option>
+                        <option value="xyz">xyz</option>
+                    </select><br><br>
+                    <label for="Years Of Experience">Years of Experience:</label><br><br>
+                    <input type="number" id="Years of Experience" placeholder="Eg: 5 Years"required><br><br>
+                    <label for="Cover Letter">Cover Letter:</label><br><br>
+                    <textarea id="Cover Letter" name="Cover Letter" placeholder="Write here..." required></textarea><br><br>
+                </fieldset>
+            </div>
+             <div>
+                <fieldset>
+                    <legend >Availability</legend>
+                    <label for="Availability Start Date">Availability Start Date:</label><br><br>
+                    <input type="date" id="Availability Start Date" name="Availability Start Date" required><br><br>
+                    <label for="Willing to Relocate">Willing to Relocate:</label><br><br>
+                    <label for="Yes">Yes</label>
+                    <input type="radio" id="Yes" name="Yes" required>
+                    <label for="No">No</label>
+                    <input type="radio" id="No" name="No"required>
+                </fieldset>
+                <br>
+             </div>
+             <button type="submit" class="submit" > Submit</button>
+        </form>
+</body>
+</html>
