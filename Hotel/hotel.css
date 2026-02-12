@@ -1,0 +1,120 @@
+    body {
+      background-color: rgb(242, 242, 170);
+      font-family: Arial, sans-serif;
+      margin: 0;
+      transition: margin-left 0.3s;
+    }
+
+    header {
+      background: #e91e63;
+      display: flex;
+      color: white;
+      padding: 60px;
+      text-align: center;
+      align-items: center;
+      justify-content: flex-start;
+      position: relative;
+    }
+
+    header h1 {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      text-align: center;
+      margin: 0;
+    }
+
+    .sidebar {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background: rgb(61, 52, 52);
+      overflow-x: hidden;
+      transition: 0.3s;
+      padding-top: 60px;
+    }
+
+    .sidebar a {
+      padding: 12px 20px;
+      text-decoration: none;
+      font-size: 18px;
+      color: white;
+      display: block;
+    }
+
+    .sidebar a:hover {
+      background: grey;
+    }
+
+    .closebtn {
+      position: absolute;
+      top: 10px;
+      right: 20px;
+      font-size: 25px;
+      cursor: pointer;
+      color: white;
+    }
+
+    .openbtn {
+      margin-right: auto;
+    }
+
+    #menu-toggle {
+      display: none;
+    }
+
+    #menu-toggle:checked~.sidebar {
+      width: 220px;
+    }
+
+    #menu-toggle:checked~.content {
+      margin-left: 220px;
+    }
+
+    .content {
+      padding: 20px;
+      transition: margin-left 0.3s;
+    }
+
+    h2 {
+      text-align: center;
+      margin-top: 0;
+      color: rgb(72, 62, 62);
+    }
+    .special-item {
+      background: rgb(76, 27, 27);
+      border-radius: 12px;
+      padding: 20px;
+      margin: 20px auto;
+      max-width: 300px;
+      text-align: center;
+    }
+
+    .special-item:hover {
+      transform: translateY(-5px);
+    }
+
+    .special-item img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+
+    .special-item h3 {
+      margin: 10px 0;
+      color: rgb(236, 29, 63);
+    }
+
+    .special-item p {
+      font-size: 14px;
+      color: rgb(175, 159, 159);
+    }
+    footer { 
+      text-align: center;
+      padding: 15px;
+      margin-top: 30px;
+      font-size: 14px;
+    }
