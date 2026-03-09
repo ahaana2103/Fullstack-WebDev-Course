@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display:flex;
+            flex-direction: column;
+            justify-content:center;
+            align-items:center;
+            
+        }
+        #guess{
+            
+        }
+        
+        button{
+            margin-top: 2rem;
+            background-color: red;
+
+        }
+    </style>
+</head>
+<body>
+    <h1>Guess the Number (1- 100)</h1>
+    <input id="guess" placeholder="enter the guess">
+    <button onclick="check()">Submit</button>
+    <p id="msg"></p>
+    <p id="chance"></p>
+    <script>
+        let random= Math.floor(Math.random()*100)+1;
+        let attempts=5;
+
+        function check(){
+            let num=parseInt(document.getElementById("guess").value);
+            attempts--;
+            if(num===random){
+                document.getElementById("msg").innerText= "Correct! The number was " + random;
+            }
+            else if(attempts === 0){
+                document.getElementById("msg").innerText="Game over: " + random;
+
+            }
+            else if( num > random){
+                document.getElementById("msg").innerText="Too high " ;
+            }
+            else if( num < random){
+                document.getElementById("msg").innerText="Too Low ";
+            }
+            else{
+                document.getElementById("chance").innerText="Chance left: " + attempts;
+            }
+        }
+    </script>
+</body>
+</html>

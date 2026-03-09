@@ -3,6 +3,13 @@
       font-family: Arial, sans-serif;
       margin: 0;
       transition: margin-left 0.3s;
+      background: #1D4350;
+      /* fallback for old browsers */
+      background: -webkit-linear-gradient(to right, #A43931, #1D4350);
+      /* Chrome 10-25, Safari 5.1-6 */
+      background: linear-gradient(to right, #A43931, #1D4350);
+      /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
     }
 
     header {
@@ -83,6 +90,7 @@
       margin-top: 0;
       color: rgb(72, 62, 62);
     }
+
     .special-item {
       background: rgb(76, 27, 27);
       border-radius: 12px;
@@ -112,7 +120,8 @@
       font-size: 14px;
       color: rgb(175, 159, 159);
     }
-    footer { 
+
+    footer {
       text-align: center;
       padding: 15px;
       margin-top: 30px;

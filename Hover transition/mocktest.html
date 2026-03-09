@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>University Information Portal</title>
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+    }
+
+    /* Grid layout for page */
+    .container {
+      display: grid;
+      grid-template-areas:
+        "topbar"
+        "nav"
+        "body"
+        "footer";
+      grid-template-rows: auto auto 1fr auto;
+      min-height: 100vh;
+    }
+
+    header {
+      grid-area: topbar;
+      background: #e74c3c;
+      padding: 10px;
+      display: grid;
+      grid-template-columns: 1fr 200px;
+      align-items: center;
+    }
+
+    header .logo {
+      font-size: 20px;
+      font-weight: bold;
+      color: #fff;
+    }
+
+    header .search input {
+      width: 100%;
+      padding: 5px;
+    }
+
+    nav {
+      grid-area: nav;
+      background: #1abc9c;
+    }
+
+    nav ul {
+      list-style: none;
+      display: inline-block;
+      width: 100%;
+    }
+
+    nav ul li {
+      display: inline-block;
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: blue;
+      font-weight: bold;
+    }
+
+    .body {
+      grid-area: body;
+      display: grid;
+      grid-template-columns: 200px 1fr;
+    }
+
+    aside {
+      background: #d8a6c1;
+      padding: 15px;
+    }
+
+    aside ul {
+      list-style: none;
+    }
+
+    aside ul li {
+      margin: 10px 0;
+    }
+
+    main {
+      background: #f2d1b3;
+      padding: 15px;
+    }
+
+    footer {
+      grid-area: footer;
+      background: #27ae60;
+      text-align: center;
+      color: #fff;
+      padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    
+    <!-- Top Header -->
+    <header>
+      <div class="logo">University Portal</div>
+      <div class="search">
+        <input type="text" placeholder="Search...">
+      </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Admissions</a></li>
+        <li><a href="#">Departments</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Main Body -->
+    <div class="body">
+      <!-- Sidebar -->
+      <aside>
+        <ul>
+          <li><a href="#">Announcements</a></li>
+          <li><a href="#">Events</a></li>
+          <li><a href="#">Library</a></li>
+          <li><a href="#">Exams</a></li>
+        </ul>
+      </aside>
+
+      <!-- Main Content -->
+      <main>
+        <h2>Welcome to the University Portal</h2>
+        <p>
+          This is the main content area where information about the university
+          will be displayed. News, updates, and academic resources can go here.
+        </p>
+      </main>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      &copy; 2025 University Name. All Rights Reserved.
+    </footer>
+
+  </div>
+</body>
+</html>

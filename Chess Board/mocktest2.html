@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Chessboard</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: #f0f0f0;
+      margin: 0;
+    }
+
+    .chessboard {
+      display: grid;
+      grid-template-columns: repeat(8, 1fr);
+      grid-template-rows: repeat(8, 1fr);
+      width: 90vmin;
+      height: 90vmin;
+      border: 5px solid #333;
+    }
+
+    .square {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 2rem;
+    }
+
+    /* Alternate colors using nth-child */
+    .square:nth-child(odd) {
+      background: #eee;
+    }
+
+    .square:nth-child(even) {
+      background: #555;
+      color: white;
+    }
+
+    /* Responsive font size for pieces */
+    @media (max-width: 600px) {
+      .square {
+        font-size: 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="chessboard">
+    <!-- Row 8 -->
+    <div class="square">♜</div><div class="square">♞</div><div class="square">♝</div><div class="square">♛</div>
+    <div class="square">♚</div><div class="square">♝</div><div class="square">♞</div><div class="square">♜</div>
+    <!-- Row 7 -->
+    <div class="square">♟</div><div class="square">♟</div><div class="square">♟</div><div class="square">♟</div>
+    <div class="square">♟</div><div class="square">♟</div><div class="square">♟</div><div class="square">♟</div>
+    <!-- Row 6 -->
+    <div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div>
+    <div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div>
+    <!-- Row 5 -->
+    <div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div>
+    <div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div>
+    <!-- Row 4 -->
+    <div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div>
+    <div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div>
+    <!-- Row 3 -->
+    <div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div>
+    <div class="square"></div><div class="square"></div><div class="square"></div><div class="square"></div>
+    <!-- Row 2 -->
+    <div class="square">♙</div><div class="square">♙</div><div class="square">♙</div><div class="square">♙</div>
+    <div class="square">♙</div><div class="square">♙</div><div class="square">♙</div><div class="square">♙</div>
+    <!-- Row 1 -->
+    <div class="square">♖</div><div class="square">♘</div><div class="square">♗</div><div class="square">♕</div>
+    <div class="square">♔</div><div class="square">♗</div><div class="square">♘</div><div class="square">♖</div>
+  </div>
+</body>
+</html>

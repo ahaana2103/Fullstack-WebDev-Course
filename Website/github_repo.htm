@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>GitHub Repo Viewer</title>
+
+<style>
+  body { font-family: Arial; padding: 20px; }
+  input, button { padding: 8px; margin-right: 5px; }
+  ul { padding: 0; list-style: none; }
+  li { padding: 10px 0; border-bottom: 1px solid #ddd; }
+  a { color: blue; font-weight: bold; text-decoration: none; }
+  .desc { color: #555; }
+</style>
+
+</head>
+<body>
+
+<h2>GitHub Repository Viewer</h2>
+
+<input id="user" placeholder="Enter GitHub username">
+<button onclick="getRepos()">Get Repositories</button>
+
+<p id="msg"></p>
+<ul id="list"></ul>
+
+<script>
+function getRepos() {
+  let user = document.getElementById("user").value.trim();
+  let msg = document.getElementById("msg");
+  let list = document.getElementById("list");
+  list.innerHTML = "";
+  msg.textContent = "Loading...";
+
+  fetch(`https://api.github.com/users/${user}/repos`)
+    .then(res => {
+      if (res.status === 404) throw "User not found";
+      return res.json();
+    })
+    .then(data => {
+      msg.textContent = "";
+      if (data.length === 0) { msg.textContent = "No repositories found"; return; }
+
+      data.forEach(repo => {
+        let li = document.createElement("li");
+
+        let a = document.createElement("a");
+        a.href = repo.html_url;
+        a.target = "_blank";
+        a.textContent = repo.name;
+
+        let d = document.createElement("div");
+        d.className = "desc";
+        d.textContent = repo.description || "No description";
+
+        li.appendChild(a);
+        li.appendChild(d);
+        list.appendChild(li);
+      });
+    })
+    .catch(err => msg.textContent = err);
+}
+</script>
+
+</body>
+</html>

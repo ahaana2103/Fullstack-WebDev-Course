@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyTube</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #202020;
+            color: white;
+            padding: 10px 20px;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: bold;
+            color: #ff0000;
+        }
+
+        .search-bar {
+            display: flex;
+            flex: 1;
+            max-width: 500px;
+            margin: 0 20px;
+        }
+
+        .search-bar input {
+            flex: 1;
+            padding: 8px;
+            border: none;
+            border-radius: 2px 0 0 2px;
+        }
+        .profile {
+            font-size: 20px;
+        }
+
+        /* Layout container */
+        .container {
+            display: flex;
+            min-height: calc(100vh - 100px);
+            background-color: #f9f9f9;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 200px;
+            background-color: #ffffff;
+            border-right: 1px solid #ddd;
+            padding: 20px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+        }
+
+        .sidebar li {
+            padding: 10px 0;
+            cursor: pointer;
+            color: #333;
+        }
+
+        .sidebar li:hover {
+            color: #ff0000;
+        }
+
+        /* Videos section */
+        .videos {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+            flex: 1;
+        }
+
+        .video-box {
+            background-color: #847979;
+            border: 1px solid #ddd;
+            width: calc(33.33% - 20px);
+            min-width: 250px;
+            height: 150px;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            font-weight: bold;
+            color: #555;
+            border-radius: 8px;
+            transition: transform 0.2s;
+        }
+
+        .video-box:hover {
+            transform: scale(1.05);
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <header class="navbar">
+        <div class="logo">MyTube</div>
+        <div class="search-bar">
+            <input type="text" placeholder="Search">
+            
+        </div>
+        <div class="profile">👤</div>
+    </header>
+
+    <!-- Main Section -->
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <ul>
+                <li>Home</li>
+                <li>Trending</li>
+                <li>Subscriptions</li>
+                <li>Library</li>
+                <li>History</li>
+            </ul>
+        </aside>
+
+        <!-- Videos Section -->
+        <main class="videos">
+            <div class="video-box">Video 1</div>
+            <div class="video-box">Video 2</div>
+            <div class="video-box">Video 3</div>
+            <div class="video-box">Video 4</div>
+            <div class="video-box">Video 5</div>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        © 2025 MyTube. All rights reserved.
+    </footer>
+</body>
+
+</html>

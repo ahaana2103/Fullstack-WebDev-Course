@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function printMessage() {
+            console.log("Hey.. there!");
+        }
+        printMessage();
+        const firstclassFun = function () {
+            console.log("This is first class function");
+        };
+        firstclassFun();
+        function startPrinting() {
+            let count = 0;
+            const intervalId = setInterval(() => {
+                count++;
+                console.log(`${count} message from setInterval`);
+                if (count == 5) {
+                    clearInterval(intervalId);
+                    console.log("Interval Stopped");
+                }
+            }, 1000);
+        }
+        startPrinting();
+        setTimeout(() => {
+            console.log("This message appears after 2 seconds (setTimeout)");
+        }, 2000);
+
+    </script>
+</body>
+
+</html>
